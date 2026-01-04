@@ -13,11 +13,13 @@ const NavBar = () => {
     <nav>
       {user ? (
         <ul>
-          <li>Welcome, {user.username}</li>
+          <li><Link to='/'>Dashboard</Link></li>
           <li><Link onClick={handleSignOut} to='/'>Sign Out</Link></li>
         </ul>) :
         <ul>
+          <li><Link to='/'>Home</Link></li> {/* this leads to landing */}
           <li><Link to='/sign-up'>Sign Up</Link></li>
+          <li><Link to='/sign-in'>Sign In</Link></li>
         </ul>
       }
     </nav>
